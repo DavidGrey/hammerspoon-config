@@ -178,7 +178,7 @@ local function stopAndQuitFrontmost()
   local app = hs.application.frontmostApplication()
   if app then
     dbg("Quitting app: " .. (app:name() or "(unknown)"))
-    app:kill() -- polite quit (like Cmd+Q)
+    app:quit() -- polite quit (like Cmd+Q)
   end
 end
 
@@ -480,7 +480,7 @@ end
 local function start()
   if running then return end
   running = true
-  math.randomseed(os.time())
+  math.randomseed(hs.timer.absoluteTime())
   cancelTimers()
   cyclesCompleted = 0
   notify("Started")
