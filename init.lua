@@ -35,6 +35,7 @@
 -- =========================================================
 
 -- ================= SETTINGS =================
+--Added Git
 local debug = true
 local PRINT_EVERY_GREEN_CHECK = false
 
